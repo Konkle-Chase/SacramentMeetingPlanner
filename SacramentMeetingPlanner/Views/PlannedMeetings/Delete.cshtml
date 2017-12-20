@@ -1,0 +1,98 @@
+﻿@model SacramentMeetingPlanner.Models.PlannedMeeting
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="MeetingDate" class="control-label"></label>
+                <input asp-for="MeetingDate" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Conductor" class="control-label"></label>
+                <input asp-for="Conductor" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="OpenningSong" class="control-label"></label>
+                <input asp-for="OpenningSong" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="StartPrayer" class="control-label"></label>
+                <input asp-for="StartPrayer" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="SacramentSong" class="control-label"></label>
+                <input asp-for="SacramentSong" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="SpeakerOne" class="control-label"></label>
+                <input asp-for="SpeakerOne" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="TopicOne" class="control-label"></label>
+                <input asp-for="TopicOne" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="SpeakerTwo" class="control-label"></label>
+                <input asp-for="SpeakerTwo" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="TopicTwo" class="control-label"></label>
+                <input asp-for="TopicTwo" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="SpeakerThree" class="control-label"></label>
+                <input asp-for="SpeakerThree" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="TopicThree" class="control-label"></label>
+                <input asp-for="TopicThree" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="SpeakerFour" class="control-label"></label>
+                <input asp-for="SpeakerFour" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="TopicFour" class="control-label"></label>
+                <input asp-for="TopicFour" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="SpeakerFive" class="control-label"></label>
+                <input asp-for="SpeakerFive" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="TopicFive" class="control-label"></label>
+                <input asp-for="TopicFive" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="OptionalSong" class="control-label"></label>
+                <input asp-for="OptionalSong" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="ClosingSong" class="control-label"></label>
+                <input asp-for="ClosingSong" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="EndPrayer" class="control-label"></label>
+                <input asp-for="EndPrayer" class="form-control" readonly />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a class="create-link" asp-action="Index">Cancel</a>
+    </form>
+</div>
+  

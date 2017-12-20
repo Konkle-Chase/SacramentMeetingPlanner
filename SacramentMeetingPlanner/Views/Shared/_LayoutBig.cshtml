@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html class="html-big">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport-big" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sacrament Meeting Planner</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+    <environment include="Development">
+        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    <link href="~/css/site-big.css" rel="stylesheet" />
+</head>
+<body class="body-big">
+    <main class="grid-container-big">
+        <div class="container-big">
+            <nav class="navbar-big">
+                <div class="navbar-header-big">
+                    <a asp-area="" asp-controller="PlannedMeetings" asp-action="BigView" class="navbar-brand-big"><h1>Sacrament Meeting Planner</h1></a>
+                </div>
+            </nav>
+        </div>
+        <article class="container-article-big">
+            @RenderBody()
+
+        </article>
+        <div class="container-big">
+            <footer class="big-footer-big">
+                <div class="big-foot-big">
+                    <p>&copy; @DateTime.Now.Year - Chase Konkle - SacramentMeetingPlanner</p>
+                </div>
+            </footer>
+        </div>
+        @RenderSection("Scripts", required: false)
+    </main>
+</body>
+</html>

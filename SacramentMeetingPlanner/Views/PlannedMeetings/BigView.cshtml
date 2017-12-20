@@ -1,0 +1,140 @@
+﻿@model IEnumerable<SacramentMeetingPlanner.Models.PlannedMeeting>
+
+@{
+    Layout = "~/Views/Shared/_LayoutBig.cshtml";
+    ViewData["Title"] = "BigView";
+
+}
+
+<h2>Planned Meetings</h2>
+
+<p>
+    <a class="create-link-big" asp-action="Create">Create New</a>
+</p>
+<table class="table-big">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MeetingDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Conductor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OpenningSong)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StartPrayer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SacramentSong)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SpeakerOne)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopicOne)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SpeakerTwo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopicTwo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SpeakerThree)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopicThree)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SpeakerFour)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopicFour)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SpeakerFive)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TopicFive)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OptionalSong)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ClosingSong)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EndPrayer)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeetingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Conductor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpenningSong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartPrayer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SacramentSong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpeakerOne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopicOne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpeakerTwo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopicTwo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpeakerThree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopicThree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpeakerFour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopicFour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpeakerFive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopicFive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OptionalSong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClosingSong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndPrayer)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> 
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-action="Index">Quick View</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

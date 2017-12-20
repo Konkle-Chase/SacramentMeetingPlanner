@@ -1,0 +1,100 @@
+﻿
+
+
+.body-big {
+    height: auto;
+    width: auto;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
+    border: solid #333;
+    border-radius: .4em;
+    margin: 30px;
+}
+
+.grid-container-big {
+    height: auto;
+    width: auto;
+    display: grid;
+    align-content: space-between;
+    grid-template-columns: auto;
+}
+
+.navbar-big {
+    list-style-type: none;
+    margin-left: 15px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: .15em;
+}
+
+.navbar-brand-big {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    .navbar-brand-big h1 {
+        margin: 0, 700px, 0, 200px;
+        font-size: 22pt;
+        font-weight: 100;
+        transition-duration: .4s;
+    }
+
+        .navbar-brand-big h1:hover {
+            color: royalblue;
+        }
+
+.container-article-big h2 {
+    font-size: 20pt;
+}
+
+.container-article-big {
+    height: auto;
+    font-size: 12pt;
+    margin: 30px;
+    padding: 0;
+}
+
+.container-big {
+    background-color: #333;
+}
+
+.big-footer-big {
+    background-color: #333;
+    width: inherit;
+}
+
+.big-foot-big {
+    margin-left: 25px;
+    background-color: #333;
+    color: white;
+    font-size: 10pt;
+    border-radius: .15em;
+}
+
+
+.grid-container-big > .container-big > .table-big {
+    width: auto;
+    height: auto;
+}
+
+.table-big {
+    font-size: 8pt;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .table-big tr td {
+        width: auto;
+        border: 1px solid #dddddd;
+        margin: auto;
+        padding: 8px;
+        text-align: center;
+    }
+
+.create-link-big {
+    font-size:10pt;
+}

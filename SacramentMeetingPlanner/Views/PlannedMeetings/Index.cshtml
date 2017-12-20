@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SacramentMeetingPlanner.Models.PlannedMeeting>
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Existing Sacrament Meeting Plans Meeting Plans</h2>
+
+<p>
+    <a class="create-link" asp-action="Create">Create New</a>
+</p>
+
+<form asp-controller="PlannedMeetings" asp-action="Index">
+    <p>
+        Date: <input type="text" name="SearchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MeetingDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MeetingDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a> |
+                    <a asp-action="BigView">Full View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+                
